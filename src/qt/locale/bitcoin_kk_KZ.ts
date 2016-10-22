@@ -107,8 +107,8 @@
         <translation>Құпия сөзді өзгерту</translation>
     </message>
     <message>
-        <source>Litecoin</source>
-        <translation>Litecoin</translation>
+        <source>Kibicoin</source>
+        <translation>Kibicoin</translation>
     </message>
     <message>
         <source>Wallet</source>

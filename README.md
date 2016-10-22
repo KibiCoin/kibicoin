@@ -1,24 +1,24 @@
-Litecoin Core integration/staging tree
+KibiCoin Core integration/staging tree
 =====================================
 
-https://litecoin.org
+http://www.kibicoin.org
 
-What is Litecoin?
+What is KibiCoin?
 ----------------
 
-Litecoin is an experimental new digital currency that enables instant payments to
-anyone, anywhere in the world. Litecoin uses peer-to-peer technology to operate
+KibiCoin is an experimental new digital currency that enables instant payments to
+anyone, anywhere in the world. KibiCoin uses peer-to-peer technology to operate
 with no central authority: managing transactions and issuing money are carried
-out collectively by the network. Litecoin Core is the name of open source
+out collectively by the network. KibiCoin Core is the name of open source
 software which enables the use of this currency.
 
 For more information, as well as an immediately useable, binary version of
-the Litecoin Core software, see https://litecoin.org
+the KibiCoin Core software, see http://www.kibicoin.org
 
 License
 -------
 
-Litecoin Core is released under the terms of the MIT license. See [COPYING](COPYING) for more
+KibiCoin Core is released under the terms of the MIT license. See [COPYING](COPYING) for more
 information or see http://opensource.org/licenses/MIT.
 
 Development process
@@ -32,16 +32,16 @@ development team members simply pulls it.
 
 If it is a *more complicated or potentially controversial* change, then the patch
 submitter will be asked to start a discussion (if they haven't already) on the
-[mailing list](https://groups.google.com/forum/#!forum/litecoin-dev).
+[mailing list](https://groups.google.com/a/kibicoin.org/d/forum/kibicoin-dev).
 
 The patch will be accepted if there is broad consensus that it is a good thing.
 Developers should expect to rework and resubmit patches if the code doesn't
 match the project's coding conventions (see [doc/coding.md](doc/coding.md)) or are
 controversial.
 
-The `master-0.10` branch is regularly built and tested, but is not guaranteed to be
-completely stable. [Tags](https://github.com/litecoin-project/litecoin/tags) are created
-regularly to indicate new official, stable release versions of Litecoin.
+The `master` branch is regularly built and tested, but is not guaranteed to be
+completely stable. [Tags](https://github.com/KibiCoin/wallet/tags) are created
+regularly to indicate new official, stable release versions of KibiCoin.
 
 Testing
 -------
@@ -55,8 +55,7 @@ lots of money.
 
 Large changes should have a test plan, and should be tested by somebody other
 than the developer who wrote the code.
-Creating a thread in the [Litecoin discussion forum](https://litecointalk.org/index.php?board=2.0) will allow the Litecoin
-development team members to review your proposal and to provide assistance with creating a test plan. 
+Creating a thread in the [KibiCoin discussion forum](https://groups.google.com/a/kibicoin.org/forum/#!forum/kibicoin-dev) will allow the KibiCoin development team members to review your proposal and to provide assistance with creating a test plan.
 
 
 Translations
@@ -89,7 +88,7 @@ to see it.
 
 **testnet and regtest modes**
 
-Run with the -testnet option to run with "play litecoins" on the test network, if you
+Run with the -testnet option to run with "play KibiCoin" on the test network, if you
 are testing multi-machine code that needs to operate across the internet.
 
 If you are testing something that can run on one machine, run with the -regtest option.
@@ -98,7 +97,7 @@ that run in -regtest mode.
 
 **DEBUG_LOCKORDER**
 
-Litecoin Core is a multithreaded application, and deadlocks or other multithreading bugs
+KibiCoin Core is a multithreaded application, and deadlocks or other multithreading bugs
 can be very difficult to track down. Compiling with -DDEBUG_LOCKORDER (configure
 CXXFLAGS="-DDEBUG_LOCKORDER -g") inserts run-time checks to keep track of which locks
 are held, and adds warnings to the debug.log file if inconsistencies are detected.

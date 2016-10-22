@@ -127,8 +127,6 @@ public:
         genesis.nNonce   = 245237;
 
 		hashGenesisBlock = genesis.GetHash();
-        cout << endl << hashGenesisBlock.ToString() << endl;
-        cout << genesis.hashMerkleRoot.ToString() << endl;
         assert(hashGenesisBlock == uint256("0x6eeb56f52a00a13235d74962781da5b1e02b338e73d32a4eb76cb630dceddb83"));
         assert(genesis.hashMerkleRoot == uint256("0x4db42f7b571df82cc049231f8ac54100e0ba40b7dc9815e4870f52020975ba30"));
 
@@ -189,7 +187,6 @@ public:
         genesis.nBits = 0x1e0ffff0;
         genesis.nNonce = 491089;
         hashGenesisBlock = genesis.GetHash();
-		cout << endl << hashGenesisBlock.ToString() << endl;
         assert(hashGenesisBlock == uint256("0x92321bfe1de75a0c2866da76d9ac6dce95f88c5cd98d1444a0a19eef89ab3cb5"));
 
         vFixedSeeds.clear();
@@ -247,7 +244,6 @@ public:
         genesis.nBits = 0x1e0ffff0;
         genesis.nNonce = 62361;
         hashGenesisBlock = genesis.GetHash();
-		cout << endl << hashGenesisBlock.ToString() << endl;
         nDefaultPort = 19444;
         assert(hashGenesisBlock == uint256("0xbd2437c1e56c5f1e5b4b809da7e74877f2f84f99774ca64f47efa924ee964699"));
 

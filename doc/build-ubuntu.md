@@ -1,9 +1,8 @@
-UBUNTU 16.10 BUILD NOTES
+UBUNTU 14.04, 16.04 AND 16.10 BUILD NOTES
 ====================
-Some notes on how to build KibiCoin in Ubuntu 16.10.
-
-Instructions written for virtual machine from osboxes:
-http://www.osboxes.org/ubuntu/#ubuntu-16-10-vmware
+Some notes on how to build KibiCoin in Ubuntu 14.04, 16.04 and 16.10.
+Instructions are written for virtual machine from osboxes:
+http://www.osboxes.org/ubuntu/
 
 Prepare system
 ---------------------
@@ -28,13 +27,25 @@ cd db-4.8.30.NC/build_unix/
 make install
 ```
 
+Install gcc-5 (only 14.04)
+---------------------
+
+```bash
+sudo add-apt-repository ppa:ubuntu-toolchain-r/test
+sudo apt-get update
+sudo apt-get install gcc-5 g++-5
+sudo update-alternatives --install /usr/bin/gcc gcc /usr/bin/gcc-5 1
+```
+
 Compile KibiCoin
 ---------------------
 
 ```bash
 cd ~/kibicoin/
 ./autogen.sh
-./configure LDFLAGS="-L/home/osboxes/kibicoin/db4/lib/" CPPFLAGS="-I/home/osboxes/kibicoin/db4/include/"
+./configure LDFLAGS="-L/home/osboxes/kibicoin/db4/lib/" CPPFLAGS="-I/home/osboxes/kibicoin/db4/include/ -DBOOST_NO_CXX11_SCOPED_ENUMS" CXXFLAGS="$CXXFLAGS -std=c++0x" CC=/usr/bin/gcc-5 # 14.04
+./configure LDFLAGS="-L/home/osboxes/kibicoin/db4/lib/" CPPFLAGS="-I/home/osboxes/kibicoin/db4/include/" CXXFLAGS="$CXXFLAGS -std=c++0x" CC=/usr/bin/gcc-5 # 16.04
+./configure LDFLAGS="-L/home/osboxes/kibicoin/db4/lib/" CPPFLAGS="-I/home/osboxes/kibicoin/db4/include/" # 16.10
 make -s -j6
 ```
 

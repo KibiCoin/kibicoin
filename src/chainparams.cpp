@@ -128,11 +128,13 @@ public:
         genesis.nBits    = 0x1e0ffff0;
         genesis.nNonce   = 595800;
 
-		hashGenesisBlock = genesis.GetHash();
+	hashGenesisBlock = genesis.GetHash();
         assert(hashGenesisBlock == uint256("0xd9bf94a4fa2d53855b3eb082446cda22c6f69f85895491b95dff7140ad3e621f"));
         assert(genesis.hashMerkleRoot == uint256("0x4db42f7b571df82cc049231f8ac54100e0ba40b7dc9815e4870f52020975ba30"));
 
-        vSeeds.push_back(CDNSSeedData("kibicointools.com", "dnsseed.kibicointools.com"));
+        vSeeds.push_back(CDNSSeedData("node01.kibicoin.org", "node01.kibicoin.org"));
+	vSeeds.push_back(CDNSSeedData("node02.kibicoin.org", "node02.kibicoin.org"));
+	vSeeds.push_back(CDNSSeedData("node03.kibicoin.org", "node03.kibicoin.org"));
 
         base58Prefixes[PUBKEY_ADDRESS] = {48};
         base58Prefixes[SCRIPT_ADDRESS] = {5};

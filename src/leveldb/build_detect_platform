@@ -193,7 +193,7 @@ else
 
     # If -std=c++0x works, use <atomic> as fallback for when memory barriers
     # are not available.
-    $CXX $CXXFLAGS -std=c++0x -x c++ - -o $CXXOUTPUT 2>/dev/null  <<EOF
+    $CXX $CXXFLAGS -std=c++1y -x c++ - -o $CXXOUTPUT 2>/dev/null  <<EOF
       #include <atomic>
       int main() {}
 EOF

@@ -23,7 +23,7 @@ mkdir ./kibicoin/db4
 wget 'http://download.oracle.com/berkeley-db/db-4.8.30.NC.tar.gz'
 tar -xzvf db-4.8.30.NC.tar.gz
 cd db-4.8.30.NC/build_unix/
-../dist/configure --enable-cxx --disable-shared --with-pic --prefix=/home/osboxes/kibicoin/db4/
+../dist/configure --enable-cxx --disable-shared --with-pic --prefix=/home/osboxes/kibicoin/db4/ # change osboxes to your username if you are not using osboxes virtual machine
 make install
 ```
 
@@ -43,10 +43,8 @@ Compile KibiCoin
 ```bash
 cd ~/kibicoin/
 ./autogen.sh
-./configure LDFLAGS="-L/home/osboxes/kibicoin/db4/lib/" CPPFLAGS="-I/home/osboxes/kibicoin/db4/include/ -DBOOST_NO_CXX11_SCOPED_ENUMS" CXXFLAGS="$CXXFLAGS -std=c++0x" CC=/usr/bin/gcc-5 # 14.04
-./configure LDFLAGS="-L/home/osboxes/kibicoin/db4/lib/" CPPFLAGS="-I/home/osboxes/kibicoin/db4/include/" CXXFLAGS="$CXXFLAGS -std=c++0x" CC=/usr/bin/gcc-5 # 16.04
-./configure LDFLAGS="-L/home/osboxes/kibicoin/db4/lib/" CPPFLAGS="-I/home/osboxes/kibicoin/db4/include/" # 16.10
-make -s -j6
+./configure LDFLAGS="-L/home/osboxes/kibicoin/db4/lib/" CPPFLAGS="-I/home/osboxes/kibicoin/db4/include/" # change osboxes to your username if you are not using osboxes virtual machine
+make -s -j2 # change number 2 to the number of cores you have
 ```
 
 Run KibiCoin deamon, CLI and QT

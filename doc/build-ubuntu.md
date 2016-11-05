@@ -37,14 +37,14 @@ sudo apt-get install gcc-5 g++-5
 sudo update-alternatives --install /usr/bin/gcc gcc /usr/bin/gcc-5 1
 ```
 
-Compile KibiCoin
+Compile KibiCoin (change osboxes to your username)
 ---------------------
 
 ```bash
 cd ~/kibicoin/
 ./autogen.sh
-./configure LDFLAGS="-L/home/osboxes/kibicoin/db4/lib/" CPPFLAGS="-I/home/osboxes/kibicoin/db4/include/" # change osboxes to your username if you are not using osboxes virtual machine
-make -s -j2 # change number 2 to the number of cores you have
+./configure LDFLAGS="-L/home/osboxes/kibicoin/db4/lib/" CPPFLAGS="-I/home/osboxes/kibicoin/db4/include/ -DBOOST_NO_CXX11_SCOPED_ENUMS" CXXFLAGS="$CXXFLAGS -std=c++0x"
+make -s -j2
 ```
 
 Run KibiCoin deamon, CLI and QT

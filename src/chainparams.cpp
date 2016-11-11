@@ -135,6 +135,8 @@ public:
         vSeeds.push_back(CDNSSeedData("node01.kibicoin.org", "node01.kibicoin.org"));
 	vSeeds.push_back(CDNSSeedData("node02.kibicoin.org", "node02.kibicoin.org"));
 	vSeeds.push_back(CDNSSeedData("node03.kibicoin.org", "node03.kibicoin.org"));
+	vSeeds.push_back(CDNSSeedData("node04.kibicoin.org", "node04.kibicoin.org"));
+	vSeeds.push_back(CDNSSeedData("node05.kibicoin.org", "node05.kibicoin.org"));
 
         base58Prefixes[PUBKEY_ADDRESS] = {48};
         base58Prefixes[SCRIPT_ADDRESS] = {5};

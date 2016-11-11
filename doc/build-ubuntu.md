@@ -13,7 +13,7 @@ sudo apt-get upgrade
 sudo apt-get install build-essential libtool autotools-dev autoconf pkg-config libssl-dev libboost-all-dev libqt5gui5 libqt5core5a libqt5core5a:i386 libqt5dbus5 qttools5-dev qttools5-dev-tools libprotobuf-dev protobuf-compiler libqrencode-dev libminiupnpc-dev libevent-dev git libdb++-dev
 ```
 
-Prepare kibicoin folder
+Prepare kibicoin folder (change osboxes to your username)
 ---------------------
 
 ```bash
@@ -23,7 +23,7 @@ mkdir ./kibicoin/db4
 wget 'http://download.oracle.com/berkeley-db/db-4.8.30.NC.tar.gz'
 tar -xzvf db-4.8.30.NC.tar.gz
 cd db-4.8.30.NC/build_unix/
-../dist/configure --enable-cxx --disable-shared --with-pic --prefix=/home/osboxes/kibicoin/db4/ # change osboxes to your username if you are not using osboxes virtual machine
+../dist/configure --enable-cxx --disable-shared --with-pic --prefix=/home/osboxes/kibicoin/db4/
 make install
 ```
 

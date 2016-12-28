@@ -64,7 +64,7 @@ static const Checkpoints::CCheckpointData data = {
         &mapCheckpoints,
         1482863018,
         49027,
-        100
+        600
     };
 
 static Checkpoints::MapCheckpoints mapCheckpointsTestnet =
